@@ -5,8 +5,8 @@
 ## 主要模块
 本项目分为四个个模块:
 
-1. ### UI: 
-    这部分使用[react-admin](https://github.com/marmelab/react-admin)构建。 相应的目录为/web。 这部分的打包功能并未完成，暂时使用**webpack**内置的**dev-server**进行发布。你可以访问**http://localhost:3000**并使用Admin/Admin进行登录
+1. ### UI:
+    这部分使用[react-admin](https://github.com/marmelab/react-admin)构建。 相应的目录为/web。 这部分的打包功能并未完成，暂时使用**webpack**内置的**dev-server**进行发布。你可以访问**http://localhost:3000**并使用Admin/Admin进行登录
     ```sh
     cd /web
     npm install
@@ -23,7 +23,7 @@
     ```
 
 3. ### DB:
-    使用mysql作为DB， 提供了dockerfile
+    使用mysql作为DB， 提供了dockerfile
     ```
     cd mysql
     docker build -t db:v1
@@ -31,7 +31,7 @@
     ```
 
 4. ### Scan: 
-    改部分负责扫描照片目录并将所有的照片信息存入mysql然后使用建立软连接的方式把照片发布在web container中
+    这部分负责扫描照片目录并将所有的照片信息存入mysql然后使用建立软连接的方式把照片发布在web container中
     ```
     cd util
     ./init.sh
